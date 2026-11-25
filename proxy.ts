@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const protectedMiddleware = auth.middleware({
   loginUrl: "/auth/sign-in",
+  publicRoutes: ["/"],
 });
 
 export default function proxy(req: NextRequest) {
